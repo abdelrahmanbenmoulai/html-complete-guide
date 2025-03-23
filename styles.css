@@ -35,7 +35,9 @@
 [data-theme="dark"] .feature-card {
     background-color: #333333;
 }
-
+*:focus {
+  outline: none;
+}
 [data-theme="dark"] .tab-header {
     background-color: #333333;
 }
