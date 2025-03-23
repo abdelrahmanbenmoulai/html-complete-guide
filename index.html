@@ -2875,8 +2875,10 @@ a.outline-button {
           <div class="demo-container">
             <a href="https://www.example.com">
               <img
-                src="https://via.placeholder.com/150x50?text=Example+Logo"
-                alt="Example Logo"
+                src="html-5.png"
+                alt="html Logo"
+                width="50"
+                hieght="50"
               />
             </a>
           </div>
@@ -7330,7 +7332,7 @@ li:first-child {
 }</code></pre>
   </div>
 
-  <div style="margin: 20px auto; width: 400px;">
+  <div style="margin: 20px auto; max-width: 100%; width: auto;">
     <div style="background-color: #f0f0f0; padding: 20px; text-align: center;">
       <div style="background-color: #ddd; padding: 20px; border: 5px solid #999;">
         <div style="background-color: #bbb; padding: 20px;">
@@ -13752,31 +13754,34 @@ animate();</code></pre>
   </div>
 
   <script>
+document.addEventListener("DOMContentLoaded", function () {
     var animCanvas = document.getElementById("animationCanvas");
     var animCtx = animCanvas.getContext("2d");
-    var animX = 0;
+
+    var animX = 30; // Start from the visible area
+    var radius = 30;
+    var speed = 2;
 
     function animate() {
-      // Clear the canvas
-      animCtx.clearRect(0, 0, animCanvas.width, animCanvas.height);
-      
-      // Draw
-      animCtx.beginPath();
-      animCtx.arc(animX, 50, 30, 0, 2 * Math.PI);
-      animCtx.fillStyle = "#3498db";
-      animCtx.fill();
-      
-      // Update position
-      animX += 2;
-      if (animX > animCanvas.width + 30) {
-        animX = -30;
-      }
-      
-      // Request next frame
-      requestAnimationFrame(animate);
+        animCtx.clearRect(0, 0, animCanvas.width, animCanvas.height);
+
+        // Draw the circle
+        animCtx.beginPath();
+        animCtx.arc(animX, animCanvas.height / 2, radius, 0, 2 * Math.PI);
+        animCtx.fillStyle = "#3498db";
+        animCtx.fill();
+
+        // Update position
+        animX += speed;
+        if (animX - radius > animCanvas.width) {
+            animX = -radius; // Restart from the left side
+        }
+
+        requestAnimationFrame(animate);
     }
 
-    animate();
+    animate(); // Start the animation
+});
   </script>
 
   <div class="info-box">
@@ -13786,7 +13791,7 @@ animate();</code></pre>
         <strong>Animation Best Practices:</strong>
       </p>
       <ul>
-        <li>Use <code>requestAnimationFrame()</code> instead of <code>setTimeout()</code> or <code>setInterval()</code> for smoother animations</li>
+        <li>Use <code>requestAnimation<br>() </code> instead of <code>setTimeout()</code> or <code>setInterval()</code> for smoother animations</li>
         <li>Clear the canvas before each frame with <code>clearRect()</code></li>
         <li>Optimize by only redrawing parts of the canvas that change</li>
         <li>Consider using multiple canvas layers for complex scenes (background, moving objects, UI)</li>
@@ -13889,7 +13894,6 @@ animate();</code></pre>
       <div class="tab-pane active" id="chart">
         <div class="code-block">
           <div class="code-header">
-            <span class="code-title">Simple Bar Chart</span>
             <span class="copy-btn"><i class="far fa-copy"></i></span>
           </div>
           <pre><code class="javascript">function drawBarChart(canvas, data, labels) {
@@ -13922,11 +13926,6 @@ animate();</code></pre>
     ctx.fillText(labels[i], x + barWidth/2, height - 10);
   }
   
-  // Draw title
-  ctx.fillStyle = "#2c3e50";
-  ctx.font = "16px Arial";
-  ctx.textAlign = "center";
-  ctx.fillText("Sample Bar Chart", width/2, 20);
 }</code></pre>
         </div>
         <div class="demo-container">
@@ -13970,12 +13969,6 @@ animate();</code></pre>
               // Draw label
               ctx.fillText(labels[i], x + barWidth/2, height - 10);
             }
-            
-            // Draw title
-            ctx.fillStyle = "#2c3e50";
-            ctx.font = "16px Arial";
-            ctx.textAlign = "center";
-            ctx.fillText("Sample Bar Chart", width/2, 20);
           }
           
           var chartCanvas = document.getElementById("chartCanvas");
@@ -15633,7 +15626,7 @@ With its wide browser support and versatile capabilities, SVG has become an esse
   </div>
 
   <h3>Geolocation API</h3>
-  <div class="info-box">
+  <div class="info-box" style="margin-bottom: 20px;">
     <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
     <div class="info-content">
       <p>
@@ -15688,7 +15681,7 @@ function showError(error) {
       <span class="demo-title">Geolocation Demo</span>
     </div>
     <div class="demo-content">
-      <button id="getLocationBtn" class="demo-button">Get Location</button>
+      <button id="getLocationBtn" class="demo-button" style="margin-bottom: 10px;">Get Location</button>
       <p id="locationDemo"></p>
     </div>
     <script>
@@ -15771,7 +15764,7 @@ function showError(error) {
   </div>
 
   <h3>Drag and Drop API</h3>
-  <div class="info-box">
+  <div class="info-box" style="margin-bottom: 20px;">
     <div class="info-icon"><i class="fas fa-hand-pointer"></i></div>
     <div class="info-content">
       <p>
@@ -16343,7 +16336,7 @@ if (sessionStorage.getItem("user") !== null) {
   </div>
 
   <h3>Web Workers API</h3>
-  <div class="info-box">
+  <div class="info-box" style="margin-bottom: 10px;">
     <div class="info-icon"><i class="fas fa-cogs"></i></div>
     <div class="info-content">
       <p>
@@ -16647,7 +16640,7 @@ fetch('https://api.example.com/upload', {
   "userId": 1
 }</textarea>
         </div>
-        <div class="fetch-result">
+        <div class="fetch-result" style="margin-bottom: 20px;">
           <div class="fetch-result-header">
             <span>Response:</span>
             <span id="responseStatus"></span>
