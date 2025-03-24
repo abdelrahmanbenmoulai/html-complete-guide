@@ -424,7 +424,7 @@ html:not([data-theme="dark"]) .nav-logo .logo-text {
 
 .mobile-nav-toggle {
     display: flex;
-    align-items: center; /* Ensure it stays centered */
+    align-items: center;
     justify-content: center;
     background: none;
     border: none;
@@ -436,7 +436,7 @@ html:not([data-theme="dark"]) .nav-logo .logo-text {
     left: -13px;
     position: relative;
     z-index: 95;
-    will-change: transform; /* Optimizes animation */
+    will-change: transform;
   }
 
 .arrow-icon {
@@ -466,7 +466,7 @@ html:not([data-theme="dark"]) .nav-logo .logo-text {
 }
 
 .mobile-nav-toggle:active {
-    transform: scale(0.7) ; /* Prevents downward movement */
+    transform: scale(0.7) ;
   }
 
 .top-controls {
@@ -673,12 +673,19 @@ p {
 .code-block {
   overflow-x: auto;
   max-width: 100%;
-  background-color: #2d2d2d;
+  background-color: rgb(255, 169, 120);
   padding: 10px;
   border-radius: 5px;
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
+  color: #333;
+}
+
+
+[data-theme="dark"] .code-block {
+  background-color: #1E1E1E;
+  color: #FFF;
 }
 
 .code-header {
@@ -812,7 +819,7 @@ html:not([data-theme="dark"]) .code-block pre::-webkit-scrollbar-thumb:hover {
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  margin-bottom: 20px; /* Ensures long words break properly */
+  margin-bottom: 20px;
 }
 
 .info-icon {
@@ -1234,23 +1241,23 @@ canvas {
   background-color: #212538 !important;
 }
 [data-theme="dark"] .info-box {
-    background-color: #222; /* Dark background */
-    color: #fff; /* White text */
-    border-left: 5px solid #ff5722; /* Orange left border */
-    border-radius: 5px; /* Smooth edges */
-    padding: 15px; /* Adjust padding for spacing */
+    background-color: #222;
+    color: #fff;
+    border-left: 5px solid #ff5722;
+    border-radius: 5px;
+    padding: 15px;
   }
   
   [data-theme="dark"] .info-box .resource-icon {
-    background-color: #ff5722; /* Adjust icon background if needed */
+    background-color: #ff5722;
   }
   
   [data-theme="dark"] .info-box p {
-    color: #ddd; /* Slightly dimmed white for better readability */
+    color: #ddd;
   }
-  /* Remove blue highlight on touch devices */
+ 
 .theme-toggle-icon,
 .mobile-nav-toggle {
-  -webkit-tap-highlight-color: transparent; /* For Safari & Chrome */
+  -webkit-tap-highlight-color: transparent;
   outline: none;
 }
