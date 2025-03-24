@@ -29,13 +29,14 @@
   --code-bg: #1e2127;
 }
 
-
 [data-theme="dark"] .feature-card {
   background-color: #333333;
 }
+
 *:focus {
   outline: none;
 }
+
 [data-theme="dark"] .tab-header {
   background-color: #333333;
 }
@@ -53,8 +54,8 @@
 }
 
 [data-theme="dark"] .resource-icon {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 [data-theme="dark"] .tag-desc,
 [data-theme="dark"] .resource-desc,
@@ -74,8 +75,8 @@ html:not([data-theme="dark"]) .feature-card {
 }
 
 html:not([data-theme="dark"]) .tab-header {
-    background-color: var(--card-bg);
-  }
+  background-color: var(--card-bg);
+}
 
 html:not([data-theme="dark"]) .tab.active {
   background-color: var(--card-bg);
@@ -126,9 +127,9 @@ html:not([data-theme="dark"]) tbody tr:hover {
 }
 
 [data-theme="dark"] ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid var(--dark-color);
-  }
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--dark-color);
+}
 
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
@@ -174,8 +175,8 @@ html:not([data-theme="dark"]) nav::-webkit-scrollbar-thumb {
 }
 
 html:not([data-theme="dark"]) nav::-webkit-scrollbar-thumb {
-    background: rgba(228, 77, 38, 0.1);
-  }
+  background: rgba(228, 77, 38, 0.1);
+}
 
 .top-controls {
   position: fixed;
@@ -271,11 +272,9 @@ body {
 }
 
 header {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--accent-color));
   color: white;
   padding: 80px 0 60px;
   text-align: center;
@@ -393,6 +392,7 @@ nav a.active {
   width: 32px;
   height: 32px;
 }
+
 .nav-logo .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
@@ -423,21 +423,21 @@ html:not([data-theme="dark"]) .nav-logo .logo-text {
 }
 
 .mobile-nav-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    width: 24px;
-    height: 24px;
-    left: -13px;
-    position: relative;
-    z-index: 95;
-    will-change: transform;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 24px;
+  height: 24px;
+  left: -13px;
+  position: relative;
+  z-index: 95;
+  will-change: transform;
+}
 
 .arrow-icon {
   position: absolute;
@@ -466,8 +466,8 @@ html:not([data-theme="dark"]) .nav-logo .logo-text {
 }
 
 .mobile-nav-toggle:active {
-    transform: scale(0.7) ;
-  }
+  transform: scale(0.7);
+}
 
 .top-controls {
   position: fixed;
@@ -682,10 +682,9 @@ p {
   color: #333;
 }
 
-
 [data-theme="dark"] .code-block {
-  background-color: #1E1E1E;
-  color: #FFF;
+  background-color: #1e1e1e;
+  color: #fff;
 }
 
 .code-header {
@@ -1219,6 +1218,7 @@ table code {
     border-color: rgba(255, 255, 255, 0.2);
   }
 }
+
 .demo-container {
   max-width: 100%;
   overflow: hidden;
@@ -1235,29 +1235,46 @@ canvas {
   height: auto;
   display: block;
 }
+
 .html,
 .css,
 .javascript {
   background-color: #212538 !important;
 }
+
 [data-theme="dark"] .info-box {
-    background-color: #222;
-    color: #fff;
-    border-left: 5px solid #ff5722;
-    border-radius: 5px;
-    padding: 15px;
-  }
-  
-  [data-theme="dark"] .info-box .resource-icon {
-    background-color: #ff5722;
-  }
-  
-  [data-theme="dark"] .info-box p {
-    color: #ddd;
-  }
- 
+  background-color: #222;
+  color: #fff;
+  border-left: 5px solid #ff5722;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+[data-theme="dark"] .info-box .resource-icon {
+  background-color: #ff5722;
+}
+
+[data-theme="dark"] .info-box p {
+  color: #ddd;
+}
+
 .theme-toggle-icon,
 .mobile-nav-toggle {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+}
+
+.demo-container {
+  margin-bottom: 20px;
+}
+
+.thisisaheading {
+  font-size: 50px !important;
+}
+
+.styled-h1 {
+  font-size: 36px;
+  color: blue;
+  text-align: center;
+  margin: 0;
 }
