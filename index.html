@@ -18026,26 +18026,20 @@ if ('geolocation' in navigator) {
     });
     // JavaScript for the HTML Entity Converter demo
     document.addEventListener('DOMContentLoaded', function () {
-    const inputField = document.getElementById('entity-input');
-    const outputDisplay = document.getElementById('entity-output');
-    const convertBtn = document.getElementById('convert-btn');
-    const resetBtn = document.getElementById('reset-btn');
+      const inputField = document.getElementById('entity-input');
+      const outputDisplay = document.getElementById('entity-output');
+      const convertBtn = document.getElementById('convert-btn');
+      const resetBtn = document.getElementById('reset-btn');
 
-    if (!inputField || !outputDisplay || !convertBtn || !resetBtn) {
-        console.error("One or more elements were not found in the DOM.");
-        return;
-    }
-
-    convertBtn.addEventListener('click', function () {
+      convertBtn.addEventListener('click', function () {
         const input = inputField.value;
         outputDisplay.innerHTML = input;
-    });
+      });
 
-    resetBtn.addEventListener('click', function () {
+      resetBtn.addEventListener('click', function () {
         inputField.value = '';
         outputDisplay.innerHTML = '<p>The converted text will appear here.</p>';
-    });
-});
+      });
 
       // Tab functionality
       const tabs = document.querySelectorAll('.tab');
