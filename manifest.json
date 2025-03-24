@@ -1,6 +1,7 @@
 {
     "name": "Complete Guide to HTML",
-    "short_name": "HTML Guide",
+    "short_name": "HTML",
+    "description": "Learn HTML from scratch",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
