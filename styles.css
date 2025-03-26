@@ -1286,20 +1286,23 @@ canvas {
 /* Floating Dock (Toast Message) */
 #copy-toast {
   position: fixed;
-  bottom: -50px; /* Initially hidden */
+  bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
-  background: black;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(0, 0, 0, 0.9);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 14px;
+  white-space: nowrap; /* Prevent text from wrapping */
   opacity: 0;
-  transition: bottom 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 90%; /* Make sure it fits on smaller screens */
+  text-align: center;
 }
 
 /* Show the dock */
 #copy-toast.show {
-  bottom: 20px;
   opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
