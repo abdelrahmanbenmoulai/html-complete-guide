@@ -1309,3 +1309,26 @@ canvas {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s ease, color 0.3s ease;
+}
+
+/* Press effect when clicking */
+.copy-btn:active {
+  transform: scale(0.85);
+}
+
+/* Bounce animation when copied */
+.copy-btn.copied {
+  animation: copy-bounce 0.3s ease-out;
+}
+
+@keyframes copy-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

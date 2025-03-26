@@ -18080,7 +18080,17 @@ if ('geolocation' in navigator) {
       });
     });
   });
+  document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        // Add animation class
+        button.classList.add("copied");
 
+        // Remove animation class after animation completes
+        setTimeout(() => {
+            button.classList.remove("copied");
+        }, 300); // Match animation duration
+    });
+});
   </script>
 </body>
 
