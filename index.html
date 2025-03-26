@@ -277,7 +277,7 @@
         &lt;/body&gt;
         &lt;/html&gt;</code></pre>
         </div>
-
+        <div id="copy-toast">Code has been copied!</div>
         <div class="tabs">
           <div class="tab-header">
             <div class="tab active" data-tab="doctype">DOCTYPE</div>
@@ -17888,7 +17888,6 @@ if ('geolocation' in navigator) {
           </div>
         </div>
       </section>
-
       <!-- Add more sections as needed -->
     </div>
   </main>
@@ -18061,6 +18060,25 @@ if ('geolocation' in navigator) {
         });
       });
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".copy-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        let codeBlock = this.closest(".code-block").querySelector("code");
+        let text = codeBlock.innerText;
+
+        // Copy text to clipboard
+        navigator.clipboard.writeText(text).then(() => {
+          let toast = document.getElementById("copy-toast");
+          toast.classList.add("show");
+
+          // Hide toast after 2 seconds
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 2000);
+        });
+      });
+    });
+  });
   </script>
 </body>
 

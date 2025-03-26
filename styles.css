@@ -1278,3 +1278,28 @@ canvas {
   text-align: center;
   margin: 0;
 }
+.copy-btn {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Floating Dock (Toast Message) */
+#copy-toast {
+  position: fixed;
+  bottom: -50px; /* Initially hidden */
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+/* Show the dock */
+#copy-toast.show {
+  bottom: 20px;
+  opacity: 1;
+}
